@@ -27,6 +27,7 @@ import mdTheme from "../../theme";
 import { ReactComponent as HomeIcon } from "../../assets/icons/logo.svg";
 import { ReactComponent as ChatIcon } from "../../assets/icons/chat.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
+import { ReactComponent as PlusIcon } from "../../assets/icons/plus.svg";
 
 const drawerWidth = 240;
 
@@ -128,6 +129,7 @@ export const ResponsiveNavbar: React.FC<ResponsiveNavbarProps> = ({
             >
               <MenuIcon style={{ color: "#A2209E" }} />
             </IconButton>
+            <PlusIcon />
             <SearchIcon />
             <ChatIcon />
             <IconButton href="/" color="inherit">
