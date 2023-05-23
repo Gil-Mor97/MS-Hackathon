@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import { AuthProvider } from "./provider/AuthProvider";
 import Login from "./components/auth/Login";
-import Signup from "./components/auth/Signup";
+import Experts from "./components/pages/experts/Experts";
 import { AuthContext } from "./context/AuthContext";
 import ResponsiveNavbar from "./components/nav/ResponsiveNabvar";
 import "./App.css";
@@ -63,14 +63,14 @@ function MyTabs() {
   // This means that if you have nested routes like:
   // users, users/new, users/edit.
   // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch(["/home", "/login", "/signup"]);
+  const routeMatch = useRouteMatch(["/home", "/login", "/experts"]);
   const currentTab = routeMatch?.pattern?.path ?? "/home";
 
   return (
     <Tabs value={currentTab}>
-      <Tab label="home" value="/home" to="/home" component={Link} />
-      <Tab label="Drafts" value="/login" to="/login" component={Link} />
-      <Tab label="Trash" value="/signup" to="/signup" component={Link} />
+      <Tab label="דף הבית" value="/home" to="/" component={Link} />
+      <Tab label="התחברות" value="/login" to="/login" component={Link} />
+      <Tab label="מומחים" value="/experts" to="/experts" component={Link} />
     </Tabs>
   );
 }
@@ -107,10 +107,10 @@ function AppRouter() {
               }
             />
             <Route
-              path="/signup"
+              path="/experts"
               element={
                 <RequireNoAuth>
-                  <Signup />
+                  <Experts />
                 </RequireNoAuth>
               }
             />

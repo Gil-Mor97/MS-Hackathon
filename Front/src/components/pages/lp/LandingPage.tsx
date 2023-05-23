@@ -16,7 +16,9 @@ function DashboardContent() {
             // height: "100vh",
             overflow: "auto",
           }}
-        ></Box>
+        >
+          TEST
+        </Box>
       </Box>
     </ThemeProvider>
   );
