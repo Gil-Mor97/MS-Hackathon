@@ -24,7 +24,7 @@ import { ReactComponent as ExpertsIcon } from "./assets/icons/experts.svg";
 import { ReactComponent as ArticlesIcon } from "./assets/icons/articles.svg";
 import { ReactComponent as InfluencersIcon } from "./assets/icons/influencers.svg";
 import { ReactComponent as GamesIcon } from "./assets/icons/games.svg";
-import { ReactComponent as HomeIcon } from "./assets/icons/homepage.svg";
+import { ReactComponent as HomeIcon } from "./assets/icons/home.svg";
 
 function RequireAuth({ children }) {
   const user = useContext(AuthContext);

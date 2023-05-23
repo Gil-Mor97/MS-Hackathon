@@ -3,6 +3,7 @@
   margin-bottom: 25px;
   position: relative;
   align-items: center;
+  justify-content: center;
 }
 .input_box {
   width: 100%;
