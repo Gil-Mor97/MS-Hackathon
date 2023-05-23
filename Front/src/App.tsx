@@ -13,6 +13,8 @@ import { AuthProvider } from "./provider/AuthProvider";
 import Login from "./components/auth/Login";
 import Experts from "./components/pages/experts/Experts";
 import { AuthContext } from "./context/AuthContext";
+import Games from "./components/pages/games/games";
+import Influencers from "./components/pages/influencers/influencers";
 import ResponsiveNavbar from "./components/nav/ResponsiveNavbar";
 import "./App.css";
 import LandingPage from "./components/pages/lp/LandingPage";
@@ -68,7 +70,7 @@ function MyTabs() {
   // This means that if you have nested routes like:
   // users, users/new, users/edit.
   // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch(["/home", "/login", "/experts"]);
+  const routeMatch = useRouteMatch(["/home", "/login", "/experts", "/games", "/influencers"]);
   const currentTab = routeMatch?.pattern?.path ?? "/home";
 
   return (
@@ -153,6 +155,22 @@ function AppRouter() {
               element={
                 <RequireNoAuth>
                   <Experts />
+                </RequireNoAuth>
+              }
+            />
+            <Route
+              path="/games"
+              element={
+                <RequireNoAuth>
+                  <Games />
+                </RequireNoAuth>
+              }
+            />
+            <Route
+              path="/influencers"
+              element={
+                <RequireNoAuth>
+                  <Influencers />
                 </RequireNoAuth>
               }
             />

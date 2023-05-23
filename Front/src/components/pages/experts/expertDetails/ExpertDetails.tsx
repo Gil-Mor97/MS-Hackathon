@@ -42,6 +42,12 @@ export default function ExpertDetails() {
           <Typography variant="body2" color="text.secondary">
             מנהל תחום האלימות במשפחה במשרד הרווחה
           </Typography>
+          <Typography variant="body2" color="text.secondary">
+            לפרטיי התקשרות: <br/>
+            מספר טלפון: 0123456789  <br/>
+            כתובת המשרד: רחוב הארבעה 52 תל אביב <br/>
+            כתובת מייל: hagaimoyal@gmail.com  <br/>
+          </Typography>
         </CardContent>
         <CardActions>
           <Button size="small">הסטוריית תגובות</Button>
