@@ -1,5 +1,5 @@
 import HomePage from "./components/pages/homepage/HomePage";
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import {
   Route,
   Routes,
@@ -13,11 +13,16 @@ import { AuthProvider } from "./provider/AuthProvider";
 import Login from "./components/auth/Login";
 import Experts from "./components/pages/experts/Experts";
 import { AuthContext } from "./context/AuthContext";
-import ResponsiveNavbar from "./components/nav/ResponsiveNabvar";
+import ResponsiveNavbar from "./components/nav/ResponsiveNavbar";
 import "./App.css";
 import LandingPage from "./components/pages/lp/LandingPage";
-import { Tabs, Tab, Typography } from "@mui/material";
+import { Tabs, Tab } from "@mui/material";
 import { StaticRouter } from "react-router-dom/server";
+import { ReactComponent as ExpertsIcon } from "./assets/icons/experts.svg";
+import { ReactComponent as ArticlesIcon } from "./assets/icons/articles.svg";
+import { ReactComponent as InfluencersIcon } from "./assets/icons/influencers.svg";
+import { ReactComponent as GamesIcon } from "./assets/icons/games.svg";
+import { ReactComponent as HomeIcon } from "./assets/icons/homepage.svg";
 
 function RequireAuth({ children }) {
   const user = useContext(AuthContext);
@@ -68,9 +73,46 @@ function MyTabs() {
 
   return (
     <Tabs value={currentTab}>
-      <Tab label="דף הבית" value="/home" to="/" component={Link} />
-      <Tab label="התחברות" value="/login" to="/login" component={Link} />
-      <Tab label="מומחים" value="/experts" to="/experts" component={Link} />
+      <Tab
+        icon={<HomeIcon />}
+        // label="דף הבית"
+        value="/home"
+        to="/"
+        component={Link}
+        style={{ minWidth: "70px" }}
+      />
+      <Tab
+        icon={<ExpertsIcon />}
+        // label="מומחים"
+        value="/experts"
+        to="/experts"
+        component={Link}
+        style={{ minWidth: "70px" }}
+      />
+      <Tab
+        icon={<GamesIcon />}
+        // label="משחקים"
+        value="/games"
+        to="/games"
+        component={Link}
+        style={{ minWidth: "70px" }}
+      />
+      <Tab
+        icon={<ArticlesIcon />}
+        // label="כתבות"
+        value="/articles"
+        to="/articles"
+        component={Link}
+        style={{ minWidth: "70px" }}
+      />
+      <Tab
+        icon={<InfluencersIcon />}
+        // label="אושיות"
+        value="/influencers"
+        to="/influencers"
+        component={Link}
+        style={{ minWidth: "70px" }}
+      />
     </Tabs>
   );
 }
