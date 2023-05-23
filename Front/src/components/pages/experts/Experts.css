@@ -1,2 +1,31 @@
-.test {
+.input{
+    display: flex;
+    width: 90%;
+    margin-bottom: 25px;
+    position: relative;
+    align-items: center;
+}
+.input_box{
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+}
+.input_submit{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    left: 0px;
+    border: none;
+    font-size: 15px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    transition:0.2s all;
+    box-shadow: 0 0 5px black;
 }
