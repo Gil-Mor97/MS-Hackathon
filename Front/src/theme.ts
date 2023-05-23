@@ -27,10 +27,10 @@ const mdTheme = createTheme({
   },
   palette: {
     primary: {
-      main: '#e6a234',
+      main: '#A2209E',
     },
     secondary: {
-      main: '#58cbcd',
+      main: '#A2209E',
     },
     error: {
       main: red.A400,
