@@ -25,6 +25,7 @@ import { ListItemButton, ListItemText } from "@mui/material";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import HomeIcon from "@mui/icons-material/Home";
+import BasicTabs from "./TabsRouter";
 
 function Copyright(props: any) {
   return (
@@ -35,7 +36,7 @@ function Copyright(props: any) {
       {...props}
     >
       {"Copyright © "}
-      כן בבית ספרנו
+      ToBetter
       {" " + new Date().getFullYear()}
     </Typography>
   );
@@ -141,19 +142,8 @@ export const ResponsiveNavbar: React.FC<ResponsiveNavbarProps> = ({
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              כן בבית ספרנו
+              ToBetter
             </Typography>
-            {/* <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton> */}
-            {/* <ListItemButton component={Link} to="/">
-              <ListItemIcon>
-                <DashboardIcon />
-              </ListItemIcon>
-              <ListItemText sx={{ textAlign: "right" }} primary="דף הבית" />
-            </ListItemButton> */}
             <IconButton href="/" color="inherit">
               <HomeIcon />
             </IconButton>
