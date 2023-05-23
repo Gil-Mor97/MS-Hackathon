@@ -1,14 +1,16 @@
 import React from "react";
 import Avatar from "@mui/material/Avatar";
 import CardHeader from "@mui/material/CardHeader";
-import { red } from "@mui/material/colors";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+import IconButton from "@mui/material/IconButton";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ShareIcon from "@mui/icons-material/Share";
+import CommentIcon from "@mui/icons-material/Comment";
+import Comments from "../../comments/comments";
 
 export default function Post() {
   return (
@@ -27,14 +29,13 @@ export default function Post() {
           </IconButton>
         }
         title="בטוומן53 - גיל 16"
-        subheader="September 14, 2016"
+        titleTypographyProps={{ fontWeight: "500" }}
+        subheader="14 בספטמבר, 2016"
       />
       <CardContent>
-        <Typography
-          sx={{ fontSize: 14 }}
-          color="text.secondary"
-          gutterBottom
-        ></Typography>
+        <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
+          חבר שלי לא מרוצה
+        </Typography>
         <Typography variant="body2">
           חבר שלי אמר לי שהוא מעדיף שאני לא אתלבש חשוף, הוא אמר לי שהוא לא רוצה
           שהעיניים של גברים אחרים יהיו על החזה והתחת שלי.
@@ -47,7 +48,18 @@ export default function Post() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <IconButton aria-label="support">
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="add comment">
+          <CommentIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+          <ShareIcon />
+        </IconButton>
+      </CardActions>
+      <CardActions>
+        <Comments></Comments>
       </CardActions>
     </Card>
   );
