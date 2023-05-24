@@ -153,7 +153,15 @@ export const ResponsiveNavbar: React.FC<ResponsiveNavbarProps> = ({
               aria-label="show 17 new notifications"
               color="secondary"
             >
-              <Badge badgeContent={17} color="error">
+              <Badge
+                badgeContent={17}
+                sx={{
+                  "& .MuiBadge-badge": {
+                    color: "white",
+                    backgroundColor: "rgb(162, 32, 158)",
+                  },
+                }}
+              >
                 <NotificationsIcon />
               </Badge>
             </IconButton>

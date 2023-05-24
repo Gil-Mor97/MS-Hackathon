@@ -7,6 +7,9 @@ import Avatar from "@mui/material/Avatar";
 export default function Comments() {
   return (
     <div>
+      <Box sx={{ mx: "auto", my: "20px" }}>
+        <Comment></Comment>
+      </Box>
       <Box sx={{ display: "flex", my: "10px" }}>
         <Avatar
           src="https://firebasestorage.googleapis.com/v0/b/to-better.appspot.com/o/female1.png?alt=media&token=b2f7ae02-c6c1-48ab-aa58-4417e5843a43"
@@ -18,9 +21,6 @@ export default function Comments() {
           variant="outlined"
           placeholder="כתב.י תגובה..."
         ></TextField>
-      </Box>
-      <Box sx={{ mx: "auto", my: "20px" }}>
-        <Comment></Comment>
       </Box>
     </div>
   );

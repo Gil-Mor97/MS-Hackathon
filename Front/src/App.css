@@ -5,3 +5,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.Mui-selected svg path {
+  fill: rgb(162, 32, 158);
+}
