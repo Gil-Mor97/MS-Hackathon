@@ -3,6 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import mdTheme from "../../../theme";
+import Posts from "../../ui-components/posts/posts";
 
 function DashboardContent() {
   return (
@@ -17,7 +18,7 @@ function DashboardContent() {
             overflow: "auto",
           }}
         >
-          TEST
+          <Posts></Posts>
         </Box>
       </Box>
     </ThemeProvider>

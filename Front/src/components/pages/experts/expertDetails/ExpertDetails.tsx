@@ -26,35 +26,31 @@ export default function ExpertDetails() {
   };
 
   return (
-    <div>
-      <h2>מומחים</h2>
-
-      <Card sx={{ maxWidth: 300, margin: "20px auto" }}>
-        <CardMedia
-          sx={{ height: 250 }}
-          image="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-03.jpg"
-          title="Hagi Moyal"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            חגי מויאל
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            מנהל תחום האלימות במשפחה במשרד הרווחה
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            לפרטיי התקשרות: <br/>
-            מספר טלפון: 0123456789  <br/>
-            כתובת המשרד: רחוב הארבעה 52 תל אביב <br/>
-            כתובת מייל: hagaimoyal@gmail.com  <br/>
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">הסטוריית תגובות</Button>
-          <Button size="small">+ בקשת תגובה</Button>
-        </CardActions>
-      </Card>
-    </div>
+    <Card sx={{ margin: "20px auto" }}>
+      <CardMedia
+        sx={{ height: 250 }}
+        image="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-03.jpg"
+        title="Hagi Moyal"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          חגי מויאל
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          מנהל תחום האלימות במשפחה במשרד הרווחה
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          לפרטיי התקשרות: <br />
+          מספר טלפון: 0123456789 <br />
+          כתובת המשרד: רחוב הארבעה 52 תל אביב <br />
+          כתובת מייל: hagaimoyal@gmail.com <br />
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">הסטוריית תגובות</Button>
+        <Button size="small">+ בקשת תגובה</Button>
+      </CardActions>
+    </Card>
   );
 }
 const expertsList = [

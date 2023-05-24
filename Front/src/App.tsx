@@ -14,7 +14,9 @@ import Login from "./components/auth/Login";
 import Experts from "./components/pages/experts/Experts";
 import { AuthContext } from "./context/AuthContext";
 import Games from "./components/pages/games/games";
+import Rewards from "./components/pages/rewards/rewards";
 import Influencers from "./components/pages/influencers/influencers";
+import Articles from "./components/pages/articles/articles";
 import ResponsiveNavbar from "./components/nav/ResponsiveNavbar";
 import "./App.css";
 import LandingPage from "./components/pages/lp/LandingPage";
@@ -24,7 +26,8 @@ import { ReactComponent as ExpertsIcon } from "./assets/icons/experts.svg";
 import { ReactComponent as ArticlesIcon } from "./assets/icons/articles.svg";
 import { ReactComponent as InfluencersIcon } from "./assets/icons/influencers.svg";
 import { ReactComponent as GamesIcon } from "./assets/icons/games.svg";
-import { ReactComponent as HomeIcon } from "./assets/icons/homepage.svg";
+import { ReactComponent as HomeIcon } from "./assets/icons/home.svg";
+import { ReactComponent as RewardsIcon } from "./assets/icons/rewards.svg";
 
 function RequireAuth({ children }) {
   const user = useContext(AuthContext);
@@ -70,18 +73,26 @@ function MyTabs() {
   // This means that if you have nested routes like:
   // users, users/new, users/edit.
   // Then the order should be ['users/add', 'users/edit', 'users'].
-  const routeMatch = useRouteMatch(["/home", "/login", "/experts", "/games", "/influencers"]);
+  const routeMatch = useRouteMatch([
+    "/home",
+    "/login",
+    "/experts",
+    "/games",
+    "/rewards",
+    "/influencers",
+    "/articles",
+  ]);
   const currentTab = routeMatch?.pattern?.path ?? "/home";
 
   return (
-    <Tabs value={currentTab}>
+    <Tabs value={currentTab} sx={{ margin: "auto" }}>
       <Tab
         icon={<HomeIcon />}
         // label="דף הבית"
         value="/home"
         to="/"
         component={Link}
-        style={{ minWidth: "70px" }}
+        style={{ minWidth: "60px" }}
       />
       <Tab
         icon={<ExpertsIcon />}
@@ -89,7 +100,7 @@ function MyTabs() {
         value="/experts"
         to="/experts"
         component={Link}
-        style={{ minWidth: "70px" }}
+        style={{ minWidth: "60px" }}
       />
       <Tab
         icon={<GamesIcon />}
@@ -97,7 +108,7 @@ function MyTabs() {
         value="/games"
         to="/games"
         component={Link}
-        style={{ minWidth: "70px" }}
+        style={{ minWidth: "60px" }}
       />
       <Tab
         icon={<ArticlesIcon />}
@@ -105,7 +116,7 @@ function MyTabs() {
         value="/articles"
         to="/articles"
         component={Link}
-        style={{ minWidth: "70px" }}
+        style={{ minWidth: "60px" }}
       />
       <Tab
         icon={<InfluencersIcon />}
@@ -113,7 +124,15 @@ function MyTabs() {
         value="/influencers"
         to="/influencers"
         component={Link}
-        style={{ minWidth: "70px" }}
+        style={{ minWidth: "60px" }}
+      />
+      <Tab
+        icon={<RewardsIcon />}
+        // label="פרסים"
+        value="/rewards"
+        to="/rewards"
+        component={Link}
+        style={{ minWidth: "60px" }}
       />
     </Tabs>
   );
@@ -171,6 +190,22 @@ function AppRouter() {
               element={
                 <RequireNoAuth>
                   <Influencers />
+                </RequireNoAuth>
+              }
+            />
+            <Route
+              path="/articles"
+              element={
+                <RequireNoAuth>
+                  <Articles />
+                </RequireNoAuth>
+              }
+            />
+            <Route
+              path="/rewards"
+              element={
+                <RequireNoAuth>
+                  <Rewards />
                 </RequireNoAuth>
               }
             />

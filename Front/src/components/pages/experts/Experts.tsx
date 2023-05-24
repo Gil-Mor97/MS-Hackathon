@@ -23,15 +23,15 @@ export default function Experts() {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: 300,
-    bgcolor: "background.paper",
+    // bgcolor: "background.paper",
     // border: "2px solid #000",
-    boxShadow: 24,
+    // boxShadow: 24,
     p: 4,
   };
 
   return (
     <div>
-      <h2>מומחים</h2>
+      <h2>מומחים ועמותות</h2>
       <form className="input">
         <Stack spacing={2} sx={{ width: 600 }}>
           <Autocomplete
