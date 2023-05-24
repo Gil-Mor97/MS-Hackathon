@@ -154,7 +154,7 @@ export const ResponsiveNavbar: React.FC<ResponsiveNavbarProps> = ({
               color="secondary"
             >
               <Badge
-                badgeContent={17}
+                badgeContent={6}
                 sx={{
                   "& .MuiBadge-badge": {
                     color: "white",
