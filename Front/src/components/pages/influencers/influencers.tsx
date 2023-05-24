@@ -55,31 +55,32 @@ export default function Influencers() {
           </IconButton> */}
         </Stack>
       </form>
-      
+
       <Card onClick={handleOpen} sx={{ maxWidth: 300, margin: "20px auto" }}>
         <CardMedia
           sx={{ height: 250 }}
-          image="https://yt3.googleusercontent.com/ytc/AGIKgqOwi08xoXHLyGJ2iTqMx5uZf06iYlrTkiPOb3WAxA=s176-c-k-c0x00ffffff-no-rj"
+          image="https://firebasestorage.googleapis.com/v0/b/to-better.appspot.com/o/inti-rel-vio.jpg?alt=media&token=d825d834-9432-4ee1-8681-8ccd46058f6c"
           title="Intimate Partner Violence Video"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          Intimate Partner Violence
+            Intimate Partner Violence
           </Typography>
           <Typography variant="body2" color="text.secondary">
             סרטון הסברה על אלימות מינית במערכת יחסים
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="medium">קישור</Button>
-          {/* https://www.youtube.com/watch?v=vK3RhRwMwIg */}
+          <Button
+            size="medium"
+            target="_blank"
+            href="https://www.youtube.com/watch?v=vK3RhRwMwIg"
+          >
+            קישור
+          </Button>
         </CardActions>
       </Card>
-    
     </div>
   );
 }
-const expertsList = [
-  { title: "פסק-זמן" },
-  { title: "chessmatec" },
-];
+const expertsList = [{ title: "Intimate Partner Violence" }];

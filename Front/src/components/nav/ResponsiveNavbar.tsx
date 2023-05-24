@@ -21,13 +21,18 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import mdTheme from "../../theme";
-import { ReactComponent as HomeIcon } from "../../assets/icons/logo.svg";
-import { ReactComponent as ChatIcon } from "../../assets/icons/chat.svg";
+import { ReactComponent as HomeLogo } from "../../assets/icons/logo.svg";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 import { ReactComponent as PlusIcon } from "../../assets/icons/plus.svg";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import Badge from "@mui/material/Badge";
+import Avatar from "@mui/material/Avatar";
+import { ReactComponent as ExpertsIcon } from "../../assets/icons/experts.svg";
+import { ReactComponent as ArticlesIcon } from "../../assets/icons/articles.svg";
+import { ReactComponent as InfluencersIcon } from "../../assets/icons/influencers.svg";
+import { ReactComponent as GamesIcon } from "../../assets/icons/games.svg";
+import { ReactComponent as HomeIcon } from "../../assets/icons/home.svg";
 
 const drawerWidth = 240;
 
@@ -129,11 +134,31 @@ export const ResponsiveNavbar: React.FC<ResponsiveNavbarProps> = ({
             >
               <MenuIcon style={{ color: "#A2209E" }} />
             </IconButton>
-            <PlusIcon />
-            <SearchIcon />
-            <ChatIcon />
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="secondary"
+            >
+              <PlusIcon />
+            </IconButton>
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="secondary"
+            >
+              <SearchIcon />
+            </IconButton>
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="secondary"
+            >
+              <Badge badgeContent={17} color="error">
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
             <IconButton href="/" color="inherit">
-              <HomeIcon />
+              <HomeLogo />
             </IconButton>
           </Toolbar>
         </AppBar>
@@ -149,7 +174,9 @@ export const ResponsiveNavbar: React.FC<ResponsiveNavbarProps> = ({
           anchor="right"
           open={open}
         >
-          <DrawerHeader>
+          <DrawerHeader
+            sx={{ display: "flex", justifyContent: "space-between" }}
+          >
             <IconButton onClick={handleDrawerClose}>
               {theme.direction === "rtl" ? (
                 <ChevronLeftIcon />
@@ -157,32 +184,57 @@ export const ResponsiveNavbar: React.FC<ResponsiveNavbarProps> = ({
                 <ChevronRightIcon />
               )}
             </IconButton>
+            <Avatar
+              src="https://firebasestorage.googleapis.com/v0/b/to-better.appspot.com/o/female1.png?alt=media&token=b2f7ae02-c6c1-48ab-aa58-4417e5843a43"
+              sx={{ marginRight: 0, marginLeft: "15px" }}
+              aria-label="recipe"
+            ></Avatar>
+            <Typography variant="h6" color="#A2209E" align="left">
+              ToBetter
+            </Typography>
           </DrawerHeader>
           <Divider />
           <List>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {["All mail", "Trash", "Spam"].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
+            <ListItem disablePadding>
+              <ListItemButton href="/">
+                <ListItemIcon>
+                  <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary={"דף הבית"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton href="/experts">
+                <ListItemIcon>
+                  <ExpertsIcon />
+                </ListItemIcon>
+                <ListItemText primary={"מומחים"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton href="/games">
+                <ListItemIcon>
+                  <GamesIcon />
+                </ListItemIcon>
+                <ListItemText primary={"משחקים"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton href="/articles">
+                <ListItemIcon>
+                  <ArticlesIcon />
+                </ListItemIcon>
+                <ListItemText primary={"מאמרים"} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton href="/influencers">
+                <ListItemIcon>
+                  <InfluencersIcon />
+                </ListItemIcon>
+                <ListItemText primary={"משפיענים"} />
+              </ListItemButton>
+            </ListItem>
           </List>
         </Drawer>
         <Main open={open}>

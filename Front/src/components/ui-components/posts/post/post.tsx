@@ -12,13 +12,21 @@ import ShareIcon from "@mui/icons-material/Share";
 import CommentIcon from "@mui/icons-material/Comment";
 import Comments from "../../comments/comments";
 
-export default function Post() {
+interface PostProps {
+  postContent: string;
+  postTitle: string;
+}
+
+export const Post: React.FC<PostProps> = ({
+  postContent,
+  postTitle,
+}: PostProps) => {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardHeader
         avatar={
           <Avatar
-            src="https://firebasestorage.googleapis.com/v0/b/to-better.appspot.com/o/female1.png?alt=media&token=b2f7ae02-c6c1-48ab-aa58-4417e5843a43"
+            src="https://firebasestorage.googleapis.com/v0/b/to-better.appspot.com/o/female3.png?alt=media&token=464c2a05-fcb9-4a4d-8ec6-203d3c86f331"
             sx={{ marginRight: 0, marginLeft: "15px" }}
             aria-label="recipe"
           ></Avatar>
@@ -34,17 +42,10 @@ export default function Post() {
       />
       <CardContent>
         <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
-          חבר שלי לא מרוצה
+          {postTitle}
         </Typography>
-        <Typography variant="body2">
-          חבר שלי אמר לי שהוא מעדיף שאני לא אתלבש חשוף, הוא אמר לי שהוא לא רוצה
-          שהעיניים של גברים אחרים יהיו על החזה והתחת שלי.
-          <br />
-          הוא לא אוסר עליי, אבל מעדיף שלא ואני רואה שהוא סובל כשאנחנו יוצאים
-          וגברים מסתכלים עליי כשאני עם טופ או שורט. מצד אחד לא באלי לבאס אותו
-          אבל באלי ללבוש מה שאני רוצה.
-          <br />
-          מה לעשות?
+        <Typography style={{ whiteSpace: "pre-line" }} variant="body2">
+          {postContent}
         </Typography>
       </CardContent>
       <CardActions>
@@ -63,4 +64,6 @@ export default function Post() {
       </CardActions>
     </Card>
   );
-}
+};
+
+export default Post;

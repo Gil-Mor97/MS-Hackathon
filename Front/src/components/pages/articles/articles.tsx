@@ -4,7 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import "./games.css";
+import "./articles.css";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -55,7 +55,7 @@ export default function Articles() {
           </IconButton> */}
         </Stack>
       </form>
-    
+
       <Card onClick={handleOpen} sx={{ maxWidth: 300, margin: "20px auto" }}>
         <CardMedia
           sx={{ height: 250 }}
@@ -64,20 +64,19 @@ export default function Articles() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-          שאלון i-risk
+            שאלון i-risk
           </Typography>
           <Typography variant="body2" color="text.secondary">
             שאלון אנונימי לאבחון סיכון במערכת זוגית
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="medium">קישור</Button>
-          {/* https://i-risk.co.il/ */}
+          <Button target="_blank" href="https://i-risk.co.il/" size="medium">
+            קישור
+          </Button>
         </CardActions>
       </Card>
     </div>
   );
 }
-const expertsList = [
-  { title: "שאלון irisk" },
-];
+const expertsList = [{ title: "שאלון irisk" }];
