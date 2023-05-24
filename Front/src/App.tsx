@@ -92,7 +92,7 @@ function MyTabs() {
         value="/home"
         to="/"
         component={Link}
-        style={{ minWidth: "60px" }}
+        style={{ minWidth: "50px" }}
       />
       <Tab
         icon={<ExpertsIcon />}
@@ -100,7 +100,7 @@ function MyTabs() {
         value="/experts"
         to="/experts"
         component={Link}
-        style={{ minWidth: "60px" }}
+        style={{ minWidth: "50px" }}
       />
       <Tab
         icon={<GamesIcon />}
@@ -108,7 +108,7 @@ function MyTabs() {
         value="/games"
         to="/games"
         component={Link}
-        style={{ minWidth: "60px" }}
+        style={{ minWidth: "50px" }}
       />
       <Tab
         icon={<ArticlesIcon />}
@@ -116,7 +116,7 @@ function MyTabs() {
         value="/articles"
         to="/articles"
         component={Link}
-        style={{ minWidth: "60px" }}
+        style={{ minWidth: "50px" }}
       />
       <Tab
         icon={<InfluencersIcon />}
@@ -124,7 +124,7 @@ function MyTabs() {
         value="/influencers"
         to="/influencers"
         component={Link}
-        style={{ minWidth: "60px" }}
+        style={{ minWidth: "50px" }}
       />
       <Tab
         icon={<RewardsIcon />}
@@ -132,7 +132,7 @@ function MyTabs() {
         value="/rewards"
         to="/rewards"
         component={Link}
-        style={{ minWidth: "60px" }}
+        style={{ minWidth: "50px" }}
       />
     </Tabs>
   );

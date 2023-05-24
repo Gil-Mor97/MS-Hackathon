@@ -40,7 +40,9 @@
     no-repeat;
   position: fixed;
   z-index: 100;
-  width: 100%;
+  left: 0;
+  top: 100px;
+  width: 30%;
   height: 80px;
-  background-position: 10px 40px;
+  background-position: 0px 40px;
 }

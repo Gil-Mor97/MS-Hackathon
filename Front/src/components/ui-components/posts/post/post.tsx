@@ -50,7 +50,7 @@ export const Post: React.FC<PostProps> = ({
       </CardContent>
       <CardActions>
         <IconButton aria-label="support">
-          <FavoriteIcon />
+          <FavoriteIcon sx={{ color: "rgb(162, 32, 158)" }} />
         </IconButton>
         <IconButton aria-label="add comment">
           <CommentIcon />

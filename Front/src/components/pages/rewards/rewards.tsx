@@ -30,9 +30,24 @@ export default function Rewards() {
             label="כל המתנות"
             onClick={handleClick}
           />
-          <Chip sx={{ mx: 1 }} label="אוכל" onClick={handleClick} />
-          <Chip sx={{ mx: 1 }} label="בילוי ופנאי" onClick={handleClick} />
-          <Chip sx={{ mx: 1 }} label="אופנה" onClick={handleClick} />
+          <Chip
+            clickable={true}
+            sx={{ mx: 1 }}
+            label="אוכל"
+            onClick={handleClick}
+          />
+          <Chip
+            clickable={true}
+            sx={{ mx: 1 }}
+            label="בילוי ופנאי"
+            onClick={handleClick}
+          />
+          <Chip
+            clickable={true}
+            sx={{ mx: 1 }}
+            label="אופנה"
+            onClick={handleClick}
+          />
         </Stack>
       </div>
       <Card onClick={handleOpen} sx={{ maxWidth: 300, margin: "20px auto" }}>
@@ -51,7 +66,7 @@ export default function Rewards() {
         </CardContent>
         <CardActions>
           <Button size="medium" target="_blank" href="">
-            קישור
+            מימוש
           </Button>
         </CardActions>
       </Card>
@@ -71,7 +86,7 @@ export default function Rewards() {
         </CardContent>
         <CardActions>
           <Button size="medium" target="_blank" href="">
-            קישור
+            מימוש
           </Button>
         </CardActions>
       </Card>
@@ -91,7 +106,7 @@ export default function Rewards() {
         </CardContent>
         <CardActions>
           <Button size="medium" target="_blank" href="">
-            קישור
+            מימוש
           </Button>
         </CardActions>
       </Card>
